@@ -138,8 +138,12 @@ p{
     background-color: white;
 }
 .element1{
+    margin-bottom: 50px;
     padding-left: 50px;
-    filter: drop-shadow(20px 20px 0px #5444a0 );
+    /* filter: drop-shadow(20px 20px 0px #5444a0 ); */
+}
+.t{
+    margin-top: 60px;
 }
 .element2{
     font-family: 'Preahvihear',heavy;
@@ -152,6 +156,7 @@ p{
     width: 540px;
 }
 .element3{
+    margin-top: 20px;
     background-image: url(./Component\ 30\ –\ 1.svg);
     height: 400px;
     background-size: contain;
@@ -163,6 +168,7 @@ h3{
     top: 10px;
 }
 .timebox{
+    height: 70px;
     color: #8A11BF;
     text-align: center;
     font-size: 30px;
@@ -175,6 +181,8 @@ h3{
 }
 .timebox1{
     margin-left: 70px;
+    position: relative;
+   
 }
 .timebox4{
     position: relative;
@@ -184,10 +192,47 @@ h3{
     padding-top: 15px;
     color: white;
 }
-span{
+.colon{
     position: relative;
     top: -13px;
     left: 8px;
     font-size: 50px;
     color: #8A11BF;
 }
+.l{
+position: absolute;
+left: 125px;
+font-size: 25px;
+font-weight: bold;
+
+}
+.l1{
+    top: 190px;
+}
+.l2{
+    top: 260px;
+}
+.l3{
+    top: 340px;
+}
+
+.index1{
+opacity: 50%;
+z-index: -1;
+background-color: #FFFFFF;
+height: 100px;
+width: 430px;
+position:absolute;
+top: 60px;
+right: 250px;
+}
+
+.index2{
+    z-index: -2;
+    background-color: #8E53F0;
+    height: 100px;
+    width: 300px;
+    position:absolute;
+    top: 75px;
+    right: 320px;
+    }

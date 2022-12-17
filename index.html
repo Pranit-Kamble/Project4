@@ -17,40 +17,40 @@
             <div class="item item2"></div>
             <div class="item item3">
                 <div class="child child1">
-                    <p>Set Wake up time
-                        <select class="time">
-                            <option value="waketime">12 AM - 01 AM</option>
-                            <option value="waketime">01 AM - 02 AM</option>
-                            <option value="waketime">02 AM - 03 AM</option>
-                            <option value="waketime">03 AM - 04 AM</option>
-                            <option value="waketime">04 AM - 05 AM</option>
-                            <option value="waketime">05 AM - 06 AM</option>
-                            <option value="waketime">06 AM - 07 AM</option>
-                            <option value="waketime">07 AM - 08 AM</option>
-                            <option value="waketime">08 AM - 09 AM</option>
-                            <option value="waketime">09 AM - 10 AM</option>
-                            <option value="waketime" selected>10 AM - 11 AM</option>
-                            <option value="waketime">11 AM - 12 PM</option>
-                            <option value="waketime">12 PM - 01 PM</option>
-                            <option value="waketime">01 PM - 02 PM</option>
-                            <option value="waketime">02 PM - 03 PM</option>
-                            <option value="waketime">03 PM - 04 PM</option>
-                            <option value="waketime">04 PM - 05 PM</option>
-                            <option value="waketime">05 PM - 06 PM</option>
-                            <option value="waketime">06 PM - 07 PM</option>
-                            <option value="waketime">07 PM - 08 PM</option>
-                            <option value="waketime">08 PM - 09 PM</option>
-                            <option value="waketime">09 PM - 10 PM</option>
-                            <option value="waketime">10 PM - 11 PM</option>
-                            <option value="waketime">11 PM - 12 PM</option>
+                    <p>Set Wake up time <span class="l l1">|</span>
+                        <select class="time" id="wakeup">
+                            <option value="1" class="waketime">12 AM - 01 AM</option>
+                            <option value="2" class="waketime">01 AM - 02 AM</option>
+                            <option value="3" class="waketime">02 AM - 03 AM</option>
+                            <option value="4" class="waketime">03 AM - 04 AM</option>
+                            <option value="5" class="waketime">04 AM - 05 AM</option>
+                            <option value="6" class="waketime">05 AM - 06 AM</option>
+                            <option value="7" class="waketime">06 AM - 07 AM</option>
+                            <option value="8" class="waketime">07 AM - 08 AM</option>
+                            <option value="9" class="waketime">08 AM - 09 AM</option>
+                            <option value="10" class="waketime">09 AM - 10 AM</option>
+                            <option value="11" class="waketime" selected>10 AM - 11 AM</option>
+                            <option value="12" class="waketime">11 AM - 12 PM</option>
+                            <option value="13" class="waketime">12 PM - 01 PM</option>
+                            <option value="14" class="waketime">01 PM - 02 PM</option>
+                            <option value="15" class="waketime">02 PM - 03 PM</option>
+                            <option value="16" class="waketime">03 PM - 04 PM</option>
+                            <option value="17" class="waketime">04 PM - 05 PM</option>
+                            <option value="18" class="waketime">05 PM - 06 PM</option>
+                            <option value="19" class="waketime">06 PM - 07 PM</option>
+                            <option value="20" class="waketime">07 PM - 08 PM</option>
+                            <option value="21" class="waketime">08 PM - 09 PM</option>
+                            <option value="22" class="waketime">09 PM - 10 PM</option>
+                            <option value="23" class="waketime">10 PM - 11 PM</option>
+                            <option value="24" class="waketime">11 PM - 12 PM</option>
                         </select>
                     </p>
                     <!-- <img src="./wakeup.png" alt=""><span>Set Wake up time</span> -->
                 </div>
                 <div class="child child2">
-                    <p>Set Lunch time
+                    <p>Set Lunch time <span class="l l2">|</span>
                         &nbsp;&nbsp;&nbsp;
-                        <select class="time">
+                        <select class="time" id="lunch">
                             <option value="lunchtime">12 AM - 01 AM</option>
                             <option value="lunchtime">01 AM - 02 AM</option>
                             <option value="lunchtime">02 AM - 03 AM</option>
@@ -79,9 +79,9 @@
                     </p>
                 </div>
                 <div class="child child3">
-                    <p>Set nap time
+                    <p>Set nap time <span class="l l3">|</span>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="time">
+                        <select class="time" id="nap">
                             <option value="naptime">12 AM - 01 AM</option>
                             <option value="naptime">01 AM - 02 AM</option>
                             <option value="naptime">02 AM - 03 AM</option>
@@ -110,9 +110,9 @@
                     </p>
                 </div>
                 <div class="child child4">
-                    <p>Set night time
+                    <p>Set night time 
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="time">
+                        <select class="time" id="night">
                             <option value="nighttime">12 AM - 01 AM</option>
                             <option value="nighttime">01 AM - 02 AM</option>
                             <option value="nighttime">02 AM - 03 AM</option>
@@ -142,30 +142,35 @@
                    
                 </div>
             </div>
-            <div class="item item4">GOOD MORNING!! WAKE UP !!</div>
-            <div class="item item5">Set Alarm</div>
+            <div class="item item4" id="text1">GOOD MORNING!! WAKE UP !!</div>
+            <div class="item item5" id="setalarm">Set Alarm</div>
             <div class="item item6">
-                Wake up Time : 10AM - 11AM <br>
-                Lunch Time : 12PM - 1PM <br>
-                Nap Time : 04PM - 05AM <br>
-                Night Time : 08PM - 09AM
+                Wake up Time : <span id="inputwakeup">10 AM - 11 AM</span> <br>
+                Lunch Time : <span id="inputlunch">12 PM - 1 PM </span> <br>
+                Nap Time : <span id="inputnap"> 04 PM - 05 AM</span>  <br>
+                Night Time :<span id="inputnight"> 08 PM - 09 AM</span> 
             </div>
         </div>
         <div class="box2">
+            <div class="index1"></div>
+            <div class="index2"></div>
             <div class="element element1">
-                <h3>Time</h3>
-                <div class="timebox timebox1">10 Hr</div>
-                <span>:</span>
-                <div class="timebox timebox2">00 mins</div>
-                <span>:</span>
-                <div class="timebox timebox3">01 secs</div>
-                <span>:</span>
-                <div class="timebox timebox4">AM</div>
+                <h3 class="t">Time</h3>
+                <div class="timebox timebox1"><div id="hr">10 </div> Hr</div>
+                <span class="colon">:</span>
+                <div class="timebox timebox2"><div id="min">00</div> min</div>
+                <span class="colon">:</span>
+                <div class="timebox timebox3"><div id="sec">00</div> sec</div>
+                <span class="colon">:</span>
+                <div class="timebox timebox4" id="am">AM</div>
             </div>
-            <div class="element element2">Grab Some Healthy Breakfast</div>
-            <div class="element element3"></div>
+            <div class="element element2" id="text2">Grab Some Healthy Breakfast</div>
+            <div class="element element3" id="img"></div>
             
         </div>
     </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
