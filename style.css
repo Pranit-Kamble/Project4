@@ -104,6 +104,7 @@ p{
     );
 }
 .item5:hover{
+    cursor: pointer;
     color: darkorchid;
     background-image: linear-gradient(
         to left,
@@ -236,3 +237,10 @@ right: 250px;
     top: 75px;
     right: 320px;
     }
+.time:hover{
+    background-color: rgb(232, 225, 239);
+    box-shadow:5px 5px #af89da;
+}
+.waketime:{
+    background-color: #6930c5;
+}
