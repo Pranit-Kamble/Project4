@@ -17,19 +17,22 @@ let text2=document.getElementById("text2")
 
 
 
-
-wakeup.addEventListener("change",function(event){
-    // console.log(event.target.value)
-    let wake=(event.target.selectedOptions[0].innerText)
-    // console.log(wake)
-    inputwakeup.innerText=wake
-})
+    wakeup.addEventListener("change",function(event){
+            // console.log(event.target.value)
+            let wake=(event.target.selectedOptions[0].innerText)
+            // console.log(wake)
+            setalarm.addEventListener("click",function(){
+            inputwakeup.innerText=wake
+        })
+    })
 
 lunch.addEventListener("change",function(event){
     // console.log(event.target.value)
     let lunchtext=(event.target.selectedOptions[0].innerText)
     // console.log(wake)
+    setalarm.addEventListener("click",function(){
     inputlunch.innerText=lunchtext
+})
 })
 
 
@@ -37,18 +40,22 @@ nap.addEventListener("change",function(event){
     // console.log(event.target.value)
     let napptext=(event.target.selectedOptions[0].innerText)
     // console.log(wake)
+    setalarm.addEventListener("click",function(){
     inputnap.innerText=napptext
 })
-
+})
 night.addEventListener("change",function(event){
     // console.log(event.target.value)
     let nighttext=(event.target.selectedOptions[0].innerText)
     // console.log(wake)
+    setalarm.addEventListener("click",function(){
     inputnight.innerText=nighttext
+})
 })
 
 setalarm.addEventListener("mouseover",function(){
     setalarm.innerText="It's Party Time"
+    setalarm.style.color="white"
 })
 setalarm.addEventListener("mouseleave",function(){
     setalarm.innerText="Set Alarm"
@@ -56,11 +63,11 @@ setalarm.addEventListener("mouseleave",function(){
 
 function timer(){
     let date=new Date();
-    console.log(date)
+    // console.log(date)
     let hours=date.getHours();
     let minutes=date.getMinutes();
     let seconds=date.getSeconds();
-    console.log(hours,minutes,seconds)
+    // console.log(hours,minutes,seconds)
 
     hr.innerText=hours
     min.innerText=minutes
