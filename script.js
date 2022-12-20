@@ -16,16 +16,17 @@ let text1=document.getElementById("text1")
 let text2=document.getElementById("text2")
 
 
-
-    wakeup.addEventListener("change",function(event){
-            // console.log(event.target.value)
-            let wake=(event.target.selectedOptions[0].innerText)
-            // console.log(wake)
-            setalarm.addEventListener("click",function(){
-            inputwakeup.innerText=wake
+// To set wakeup time
+wakeup.addEventListener("change",function(event){
+        // console.log(event.target.value)
+        let wake=(event.target.selectedOptions[0].innerText)
+        // console.log(wake)
+        setalarm.addEventListener("click",function(){
+        inputwakeup.innerText=wake
         })
     })
 
+// To set lunch time
 lunch.addEventListener("change",function(event){
     // console.log(event.target.value)
     let lunchtext=(event.target.selectedOptions[0].innerText)
@@ -35,7 +36,7 @@ lunch.addEventListener("change",function(event){
 })
 })
 
-
+// Set nap time
 nap.addEventListener("change",function(event){
     // console.log(event.target.value)
     let napptext=(event.target.selectedOptions[0].innerText)
@@ -44,6 +45,8 @@ nap.addEventListener("change",function(event){
     inputnap.innerText=napptext
 })
 })
+
+// Set night time
 night.addEventListener("change",function(event){
     // console.log(event.target.value)
     let nighttext=(event.target.selectedOptions[0].innerText)
@@ -53,6 +56,7 @@ night.addEventListener("change",function(event){
 })
 })
 
+// Change Set Alarm Text and css property
 setalarm.addEventListener("mouseover",function(){
     setalarm.innerText="It's Party Time"
     setalarm.style.color="white"
@@ -61,6 +65,8 @@ setalarm.addEventListener("mouseleave",function(){
     setalarm.innerText="Set Alarm"
 })
 
+
+// Clock function
 function timer(){
     let date=new Date();
     // console.log(date)
@@ -111,7 +117,8 @@ function timer(){
         img.style.backgroundImage="url('night.svg')"
     }
 }
-   
+
+// To start clock without button and set 1sec interval time
 setInterval(()=>{
     timer()
 },1000)
