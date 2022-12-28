@@ -16,6 +16,10 @@ let text1=document.getElementById("text1")
 let text2=document.getElementById("text2")
 
 
+
+
+
+
 // To set wakeup time
 wakeup.addEventListener("change",function(event){
         // console.log(event.target.value)
@@ -23,9 +27,10 @@ wakeup.addEventListener("change",function(event){
         // console.log(wake)
         setalarm.addEventListener("click",function(){
         inputwakeup.innerText=wake
+        // console.log(inputwakeup.target.value)
         })
     })
-
+  
 // To set lunch time
 lunch.addEventListener("change",function(event){
     // console.log(event.target.value)
@@ -33,6 +38,7 @@ lunch.addEventListener("change",function(event){
     // console.log(wake)
     setalarm.addEventListener("click",function(){
     inputlunch.innerText=lunchtext
+    
 })
 })
 
@@ -56,6 +62,12 @@ night.addEventListener("change",function(event){
 })
 })
 
+
+
+
+
+
+
 // Change Set Alarm Text and css property
 setalarm.addEventListener("mouseover",function(){
     setalarm.innerText="It's Party Time"
@@ -75,48 +87,95 @@ function timer(){
     let seconds=date.getSeconds();
     // console.log(hours,minutes,seconds)
 
-    hr.innerText=hours
-    min.innerText=minutes
-    sec.innerText=seconds
-
-    // For AM PM
-    if(hr.innerText>12){
+       // For AM PM
+    if(hours>=12){
         ampm.innerText="PM"
     }
     else{
         ampm.innerText="AM"
     }
 
-    // For Text & image Change
+    setalarm.addEventListener("click",function(){
+        // console.log(wakeup.value)
+        // console.log(lunch.value)
+        // console.log(hours)
 
-    if(6<=hr.innerText && 10>=hr.innerText){
-        text1.innerText="GOOD MORNING!! WAKE UP !!"
+        if(night.value==hours){
+            text1.innerText="GOOD NIGHT !!"
+            img.style.backgroundImage="url('night.svg')"
+            img.style.backgroundPosition="center"
+        }
+
+        else if(nap.value==hours){
+            text1.innerText="GOOD EVENING !!"
+            text2.style.paddingTop="5px"
+            img.style.backgroundImage="url('tea.avif')"
+            img.style.backgroundSize="cover"
+        }
+
+        else if(lunch.value==hours){
+            text1.innerText="GOOD AFTERNOON !! TAKE SOME SLEEP"
+            img.style.backgroundImage="url('Afternoon.svg')"
+        }
+
+       else if(wakeup.value==hours){
+            text1.innerText="GOOD MORNING!! WAKE UP !!"
+            img.style.backgroundImage="url('./Component 30 – 1.svg')"
+        }
+        
+        
+  
+    })
+ 
+ 
+    
+    
+
+    hr.innerText=hours
+    min.innerText=minutes
+    sec.innerText=seconds
+
+    if(hr.innerText>12){
+        hr.innerText=hr.innerText-12
+    }
+    else if(hr.innerText==0){
+        hr.innerText=12
+    }
+    
+   
+    // For Text & image Change
+    console.log(hr)
+    if(6<=hr.innerText && 12>=hr.innerText && ampm.innerText=="AM"){
+        // text1.innerText="GOOD MORNING!! WAKE UP !!"
         text2.innerText="GRAB SOME HEALTHY BREAKFAST!!!"
-        text2.style.paddingTop="10px"
-        text2.style.lineHeight="40px"
-        img.style.backgroundImage="url('Component\ 30\ –\ 1.svg')"
+        text2.style.paddingTop="20px"
+        // text2.style.lineHeight="40px"
+        // img.style.backgroundImage="url('Component\ 30\ –\ 1.svg')"
     }
-    else if(12<=hr.innerText && 15>=hr.innerText){
-        text1.innerText="GOOD AFTERNOON !! TAKE SOME SLEEP"
+    else if(1<=hr.innerText && 3>=hr.innerText){
+        // text1.innerText="GOOD AFTERNOON !! TAKE SOME SLEEP"
         text2.innerText="Let's Have Some Lunch"
-        img.style.backgroundImage="url('Afternoon.svg')"
+        // img.style.backgroundImage="url('Afternoon.svg')"
     }
-    else if(16<=hr.innerText && 19>=hr.innerText){
-        text1.innerText="GOOD EVENING !!"
-        text2.style.paddingTop="10px"
-        text2.style.lineHeight="40px"
+    else if(4<=hr.innerText && 7>=hr.innerText){
+        // text1.innerText="GOOD EVENING !!"
+        text2.style.paddingTop="5px"
+        // text2.style.lineHeight="40px"
         text2.innerText="STOP YAWNING,GET SOME TEA.. Its just evening!"
-        img.style.backgroundImage="url('tea.avif')"
+        // img.style.backgroundImage="url('tea.avif')"
         img.style.backgroundSize="cover"
     }
-    else if(20<=hr.innerText || 1<=hr.innerText  ){
-        text1.innerText="GOOD NIGHT !!"
-        text2.style.paddingTop="10px"
+    else if(8<=hr.innerText && 12>=hr.innerText){
+        // text1.innerText="GOOD NIGHT !!"
+        text2.style.paddingTop="20px"
         text2.style.lineHeight="40px"
         text2.innerText="CLOSE YOUR EYES AND GO TO SLEEP"
-        img.style.backgroundImage="url('night.svg')"
+        // img.style.backgroundImage="url('night.svg')"
     }
+    
 }
+
+
 
 // To start clock without button and set 1sec interval time
 setInterval(()=>{
