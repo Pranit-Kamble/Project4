@@ -152,7 +152,7 @@ function timer(){
         // text2.style.lineHeight="40px"
         // img.style.backgroundImage="url('Component\ 30\ –\ 1.svg')"
     }
-    else if(12<=hr.innerText && 3>=hr.innerText && ampm.innerText=="PM"){
+    else if(12==hr.innerText ||  1<=hr.innerText && 3>=hr.innerText && ampm.innerText=="PM"){
         // text1.innerText="GOOD AFTERNOON !! TAKE SOME SLEEP"
         text2.innerText="Let's Have Some Lunch"
         // img.style.backgroundImage="url('Afternoon.svg')"
@@ -172,7 +172,7 @@ function timer(){
         text2.innerText="CLOSE YOUR EYES AND GO TO SLEEP"
         // img.style.backgroundImage="url('night.svg')"
     }
-    else if(12<=hr.innerText && 6>hr.innerText && ampm.innerText=="AM"){
+    else if(12==hr.innerText ||  1<=hr.innerText && 6>hr.innerText && ampm.innerText=="PM"){
         // text1.innerText="GOOD NIGHT !!"
         text2.style.paddingTop="20px"
         text2.style.lineHeight="40px"
