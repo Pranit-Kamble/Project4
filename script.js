@@ -64,10 +64,6 @@ night.addEventListener("change",function(event){
 
 
 
-
-
-
-
 // Change Set Alarm Text and css property
 setalarm.addEventListener("mouseover",function(){
     setalarm.innerText="It's Party Time"
@@ -81,11 +77,9 @@ setalarm.addEventListener("mouseleave",function(){
 // Clock function
 function timer(){
     let date=new Date();
-    // console.log(date)
     let hours=date.getHours();
     let minutes=date.getMinutes();
     let seconds=date.getSeconds();
-    // console.log(hours,minutes,seconds)
 
        // For AM PM
     if(hours>=12){
@@ -96,9 +90,6 @@ function timer(){
     }
 
     setalarm.addEventListener("click",function(){
-        // console.log(wakeup.value)
-        // console.log(lunch.value)
-        // console.log(hours)
 
         if(night.value==hours){
             text1.innerText="GOOD NIGHT !!"
@@ -144,40 +135,28 @@ function timer(){
     
    
     // For Text & image Change
-    console.log(hr)
+    // console.log(hr)
     if(6<=hr.innerText && 12>hr.innerText && ampm.innerText=="AM"){
-        // text1.innerText="GOOD MORNING!! WAKE UP !!"
         text2.innerText="GRAB SOME HEALTHY BREAKFAST!!!"
         text2.style.paddingTop="20px"
-        // text2.style.lineHeight="40px"
-        // img.style.backgroundImage="url('Component\ 30\ –\ 1.svg')"
     }
     else if(12==hr.innerText ||  1<=hr.innerText && 3>=hr.innerText && ampm.innerText=="PM"){
-        // text1.innerText="GOOD AFTERNOON !! TAKE SOME SLEEP"
         text2.innerText="Let's Have Some Lunch"
-        // img.style.backgroundImage="url('Afternoon.svg')"
     }
     else if(4<=hr.innerText && 7>=hr.innerText && ampm.innerText=="PM"){
-        // text1.innerText="GOOD EVENING !!"
         text2.style.paddingTop="5px"
-        // text2.style.lineHeight="40px"
         text2.innerText="STOP YAWNING,GET SOME TEA.. Its just evening!"
-        // img.style.backgroundImage="url('tea.avif')"
         img.style.backgroundSize="cover"
     }
     else if(8<=hr.innerText && 12>hr.innerText && ampm.innerText=="PM"){
-        // text1.innerText="GOOD NIGHT !!"
         text2.style.paddingTop="20px"
         text2.style.lineHeight="40px"
         text2.innerText="CLOSE YOUR EYES AND GO TO SLEEP"
-        // img.style.backgroundImage="url('night.svg')"
     }
     else if(12==hr.innerText ||  1<=hr.innerText && 6>hr.innerText && ampm.innerText=="PM"){
-        // text1.innerText="GOOD NIGHT !!"
         text2.style.paddingTop="20px"
         text2.style.lineHeight="40px"
         text2.innerText="CLOSE YOUR EYES AND GO TO SLEEP"
-        // img.style.backgroundImage="url('night.svg')"
     }
     
 }

@@ -331,6 +331,9 @@ right: 240px;
     .item4{
         font-size: 25px;
     }
+    .element2{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width:640px){
@@ -379,6 +382,13 @@ right: 240px;
         width: 275px;
     }
     .element1{
+        padding: 3px;
         width: 280px;
+    }
+    .timebox{
+        margin-left: 0px;
+    }
+    .colon{
+        margin-left: 0px;
     }
 }
